@@ -1,3 +1,3 @@
 
 number = "room318" 
-input(numder[::-1])
+input(number[::-1])
