@@ -21,3 +21,6 @@ print(childrenList)
 
 childrenListCopy = childrenList.copy() 
 print(childrenListCopy) 
+
+childrenListCopy.clear() 
+print(childrenListCopy) 
