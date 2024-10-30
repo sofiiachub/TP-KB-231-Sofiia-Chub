@@ -77,10 +77,9 @@ def updateElement():
                         print("You didn't choose from the proposed options")        
                 break   
         
-        list.sort()
-        
-        strForPrintNew = "Name: " + elem["name"] + "\n  Phone: " + elem["phone"] + "\n  Gmail: " + elem["gmail"] + "\n  Group: " + elem["group"]
-        print("Updated information\n", strForPrintNew)     
+        list.sort(key=lambda elem: elem["name"])
+        printAllList()
+
     else:
         print("Name not found")       
     return

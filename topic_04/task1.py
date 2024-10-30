@@ -11,7 +11,7 @@ def divide(num1, num2):
     if num2 != 0:
         return num1 / num2
     else:
-        return "Error. Division by zero."
+        return "Error. Division by zero"
 
 def calculator(num1, num2, operation):
     match operation:
@@ -24,7 +24,7 @@ def calculator(num1, num2, operation):
         case "/":
             return divide(num1, num2)
         case _:
-            return "Error."
+            return "Error"
 
 start = input("This is a calculator. Will we start? (Yes/No): ")
 
