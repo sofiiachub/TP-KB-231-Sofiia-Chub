@@ -58,30 +58,41 @@ def updateElement():
                 print("Current information about the student")
                 strForPrint = "Name: " + elem["name"] + "\n  Phone: " + elem["phone"] + "\n  Gmail: " + elem["gmail"] + "\n  Group: " + elem["group"]
                 print(strForPrint)
-                
+
                 choice = input("What data do you want to change (name|phone|gmail|group): ")
+                
                 match choice:
-                    case "name":
+                     case "name":
                         newName = input("Enter a new name: ")
-                        elem["name"] = newName
-                    case "phone":
+
+                        list.remove(elem)
+                        newItem = {"name": newName, "phone": elem["phone"], "gmail": elem["gmail"], "group": elem["group"]}
+
+                        insertPosition = 0
+                        for item in list:
+                            if newName > item["name"]:
+                                insertPosition += 1
+                            else:
+                                break
+                        list.insert(insertPosition, newItem)
+                
+                     case "phone":
                         newPhone = input("Enter a new phone: ")
                         elem["phone"] = newPhone
-                    case "gmail":
+                     case "gmail":
                         newGmail = input("Enter a new gmail: ")
                         elem["gmail"] = newGmail
-                    case "group":
+                     case "group":
                         newGroup = input("Enter a new group: ")
                         elem["group"] = newGroup
-                    case _:
+                     case _:
                         print("You didn't choose from the proposed options")        
-                break   
-        
-        list.sort(key=lambda elem: elem["name"])
-        printAllList()
+                        break
+            else:
+                print("Name not found")
 
-    else:
-        print("Name not found")       
+    printAllList()
+  
     return
     
 def main():
