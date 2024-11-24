@@ -6,8 +6,6 @@ def myinput():
 
     return num1, num2, operation
 
-
-    pass
 def operation(num1, num2, operation, add, subtract, multiply, divide):
     match operation:
         case "+":

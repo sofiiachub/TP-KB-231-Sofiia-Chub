@@ -92,7 +92,6 @@ def updateElement():
                 print("Name not found")
 
     printAllList()
-  
     return
     
 def main():
